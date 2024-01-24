@@ -11,11 +11,11 @@ const router = createBrowserRouter([
     element: <div>Hello world!</div>,
 },
 {
-    path: "/account",
-    element: <p>Test</p>
+    path: "/compte",
+    element: <p>account</p>
 },
 {
-    path: "/connect",
+    path: "/connexion",
     element: <p>connect</p>
 },
 {
@@ -27,10 +27,13 @@ const router = createBrowserRouter([
     element: <p>404</p>
 }
 ]);
+
+
+
 function App() {
     return(
         <div>
-            <Header/>
+            <Header account={"coucou"}/>
             <RouterProvider router={router}/>
         </div>
     );

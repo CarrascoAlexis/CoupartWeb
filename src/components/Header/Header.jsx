@@ -1,14 +1,21 @@
 
 import '../../index.css';
 import './Header.css';
+import { Link } from "react-router-dom";
 
-function Header()
+function Header(props)
 {
+    let connectText = "Connexion";
+    if(props.account != null && props.account.id != null)
+    {
+        connectText = "Compte";
+    }
 
     return(
     <header>
         <nav className='d-flex'>
             <ul>
+                {/* <li><Link to='/test'>Services</Link></li> */}
                 <li>Services</li>
                 <dot/>
                 <li>A propos</li>
@@ -20,7 +27,7 @@ function Header()
             <ul>
                 <li>Contact</li>
                 <dot/>
-                <li>Connexion</li>
+                <li>{connectText}</li>
             </ul>
         </nav>
     </header>)
