@@ -11,8 +11,20 @@ const router = createBrowserRouter([
     element: <div>Hello world!</div>,
 },
 {
-    path: "/test",
+    path: "/account",
     element: <p>Test</p>
+},
+{
+    path: "/connect",
+    element: <p>connect</p>
+},
+{
+    path: "/contact",
+    element: <p>contact</p>
+},
+{
+    path: "*",
+    element: <p>404</p>
 }
 ]);
 function App() {

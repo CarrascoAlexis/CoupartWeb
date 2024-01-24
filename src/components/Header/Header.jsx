@@ -7,15 +7,20 @@ function Header()
 
     return(
     <header>
-        <nav>
+        <nav className='d-flex'>
             <ul>
-                <li>a</li>
-                <li>b</li>
+                <li>Services</li>
+                <dot/>
+                <li>A propos</li>
             </ul>
-            <h1>TEST</h1>
+            <div>
+                <h1>Sandrine Coupart</h1>
+                {/* <p>diététicienne-nutritionniste</p> */}
+            </div>
             <ul>
-                <li>c</li>
-                <li>d</li>
+                <li>Contact</li>
+                <dot/>
+                <li>Connexion</li>
             </ul>
         </nav>
     </header>)
