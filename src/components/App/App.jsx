@@ -1,26 +1,53 @@
 import {
     createBrowserRouter,
     RouterProvider,
+    BrowserRouter as Router
 } from "react-router-dom";
 
 import Header from "../Header/Header";
 
+const account="coucou"
+
 const router = createBrowserRouter([
 {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: 
+    <div>
+        <Header account={account}/>
+        <p>Hello world!</p>
+    </div>,
 },
 {
     path: "/compte",
-    element: <p>account</p>
+    element: 
+    <div>
+        <Header account={account}/>
+        <p>compte</p>
+    </div>
 },
 {
     path: "/connexion",
-    element: <p>connect</p>
+    element: 
+    <div>
+        <Header account={account}/>
+        <p>connexion</p>
+    </div>
 },
 {
     path: "/contact",
-    element: <p>contact</p>
+    element: 
+    <div>
+        <Header account={account}/>
+        <p>contact</p>
+    </div>
+},
+{
+    path:"/services",
+    element: 
+    <div>
+        <Header account={account}/>
+        <p>services</p>
+    </div>
 },
 {
     path: "*",
@@ -33,7 +60,6 @@ const router = createBrowserRouter([
 function App() {
     return(
         <div>
-            <Header account={"coucou"}/>
             <RouterProvider router={router}/>
         </div>
     );

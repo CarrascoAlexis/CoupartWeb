@@ -12,6 +12,15 @@ nav>ul{
 
 }
 
+nav a{
+    text-decoration: none;
+    color: var(--dark-gold)
+}
+
+nav a:hover{
+    color:var(--text-light-gold);
+}
+
 nav li {
     margin: auto 0;
 }

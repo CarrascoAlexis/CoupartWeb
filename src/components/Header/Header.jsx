@@ -1,11 +1,16 @@
 
 import '../../index.css';
 import './Header.css';
-import { Link } from "react-router-dom";
+import React from "react";
+import { 
+    BrowserRouter as Router,
+  Link
+ } from "react-router-dom";
 
 function Header(props)
 {
     let connectText = "Connexion";
+    const connectLink = connectText=="Connexion"? "/connect" : "/account"
     if(props.account != null && props.account.id != null)
     {
         connectText = "Compte";
@@ -13,10 +18,11 @@ function Header(props)
 
     return(
     <header>
+            
         <nav className='d-flex'>
             <ul>
                 {/* <li><Link to='/test'>Services</Link></li> */}
-                <li>Services</li>
+                <li><Link to="/services">Services</Link></li>
                 <dot/>
                 <li>A propos</li>
             </ul>
@@ -25,9 +31,9 @@ function Header(props)
                 {/* <p>diététicienne-nutritionniste</p> */}
             </div>
             <ul>
-                <li>Contact</li>
+                <li><Link to="/contact">Contact</Link></li>
                 <dot/>
-                <li>{connectText}</li>
+                <li><Link to={connectText=="Connexion"? "/connect" : "/account"}>{connectText}</Link></li>
             </ul>
         </nav>
     </header>)
